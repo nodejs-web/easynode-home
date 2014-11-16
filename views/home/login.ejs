@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <% include header.ejs %>
+</head>
+<body class="home-template">
+
+<!-- 导航条 -->
+<% include navbar.ejs %>
+<div class="page-header">
+
+</div>
+<!-- 页面主体 -->
+<div class="container">
+    <form class="form-signin" role="form" style="max-width:450px; margin:0 auto;" action="/login" method="post">
+        <h3 class="form-signin-heading">快使用账号登录</h3>
+        <input type="email" name="emailOrAccount" class="form-control" placeholder="邮箱/账号" required autofocus>
+        <br/>
+        <input type="password" name="password" class="form-control" placeholder="密码" required>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="remember" value="remember-me">记住我
+            </label>
+            <a href="/forget" >忘记密码？</a>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">快速登录</button>
+    </form>
+</div> <!-- /container -->
+<!-- 页脚 -->
+<% include footer.ejs %>
+
+<!-- 脚本 -->
+<% include javascript.ejs %>
+</body>
+</html>

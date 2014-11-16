@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <% include header.ejs %>
+    <style>
+        .sign-up-container{
+            padding-top: 126px;
+            padding-bottom: 40px;
+            margin: 0 auto;
+            max-width: 510px;
+            text-align:center;
+            border-bottom: 3px solid #28a4c9;
+        }
+
+        .sso{
+            width:30px;
+            height:30px;
+            background-color: red;
+        }
+        .sso-github {
+            background: url(../images/asset/sso-github.png) 0 0 no-repeat;
+        }
+
+        .sso-google {
+            background: url(../images/asset/sso-google.png) 7px 0 no-repeat;
+        }
+
+        .sso-email {
+            background: url(../images/asset/sso-email.png) 0 4px no-repeat;
+        }
+    </style>
+</head>
+<body class="home-template">
+
+<!-- 导航条 -->
+<% include navbar.ejs %>
+
+<!-- 注册 -->
+<div class="sign-up-container">
+        <a class="btn btn-info btn-lg" href="https://github.com/login/oauth/authorize?client_id=70d60893e7ec2ee42e40&scope=user:email&redirect_uri=https://elasticbox.com/services/security/github_callback?accept_terms=true">
+            <span class="sso sso-github"></span><span>使用Github账号</span></a>
+
+        <a class="btn btn-success btn-lg" href="https://accounts.google.com/o/oauth2/auth?client_id=726336950247-p6172q2aojfuntnp8e0rocg45c19ss4b.apps.googleusercontent.com&response_type=code&scope=profile+email&redirect_uri=https%3A//elasticbox.com/services/security/google_callback%3Faccept_terms%3Dtrue&approval_prompt=auto">
+            <span class="sso sso-google"></span><span>使用google账号</span></a>
+
+        <a class="btn btn-danger btn-lg" id="sign-up" href="/info">
+            <span class="sso sso-email"></span><span>使用个人邮箱</span>
+        </a>
+</div>
+
+
+
+
+<!-- 页脚 -->
+<% include footer.ejs %>
+
+<!-- 脚本 -->
+<% include javascript.ejs %>
+</body>
+</html>

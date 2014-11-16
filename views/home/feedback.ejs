@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <% include header.ejs %>
+</head>
+<body class="home-template">
+
+<!-- 导航条 -->
+<% include navbar.ejs %>
+<div class="page-header">
+
+</div>
+<!-- 页面主体 -->
+<div class="container">
+    <form class="form-signin" role="form" style="max-width:450px; margin:0 auto;" action="/feedback" method="post">
+        <h3 class="form-signin-heading">意见反馈</h3>
+        <input type="email" name="email" class="form-control" placeholder="如果您需要得到确切的答复，请填写邮箱" required autofocus>
+        <br/>
+         <textarea class="form-control" name="feed" rows="5" placeholder="在这里填写建议"></textarea>
+        <br/>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">提交反馈</button>
+    </form>
+    <!--<form role="form" action="/feedback" method="post" style="max-width:450px; margin:0 auto;">-->
+        <!--<div class="form-group">-->
+            <!--<label for="exampleInputEmail1">邮箱地址</label>-->
+            <!--<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">-->
+        <!--</div>-->
+        <!--<div class="form-group">-->
+            <!--<label for="exampleInputPassword1">登录密码</label>-->
+            <!--<input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入登录密码">-->
+        <!--</div>-->
+
+        <!--<div class="checkbox">-->
+            <!--<label>-->
+                <!--<input type="checkbox" name="remember">记住账号-->
+            <!--</label>-->
+            <!--<a href="/forget" class="right">忘记密码？</a>-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn btn-success btn-block">快速登录</button>-->
+    <!--</form>-->
+</div> <!-- /container -->
+<!-- 页脚 -->
+<% include footer.ejs %>
+
+<!-- 脚本 -->
+<% include javascript.ejs %>
+</body>
+</html>

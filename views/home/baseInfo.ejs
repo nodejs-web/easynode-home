@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!-- 头部 -->
+    <% include header.ejs %>
+</head>
+<body class="home-template">
+<!-- 导航条 -->
+<% include navbar.ejs %>
+<div class="page-header">
+    <div class="container">
+        <h2>账号管理</h2>
+    </div>
+</div>
+<!-- 页面主要内容 -->
+<div class="container bs-docs-container">
+    <div class="row">
+        <div class="col-xs-3 col-md-3">
+            <div class="bs-docs-sidebar hidden-print hidden-xs hidden-sm" role="complementary">
+                <ul class="nav bs-docs-sidenav">
+                    <li><a href="/baseInfo">基本信息</a></li>
+                    <li><a href="/loginSafe">账号安全</a></li>
+                    <li><a href="/pushData">资源共享</a></li>
+                    <li><a href="/pushCase">案例发布</a></li>
+                    <li><a href="/pushTour">教程发布</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-xs-9 col-md-9" role="main">
+             <form role="form"  style="max-width:400px;" action="/changeInfo" method="post">
+                 <div class="form-group">
+                     <label for="inputName">名称</label>
+                     <input type="text" name="name" class="form-control" id="inputName" placeholder="填写姓名" value="王富贵">
+                 </div>
+                 <div class="form-group">
+                     <label for="inputNick">昵称</label>
+                     <input type="text" name="nick" class="form-control" id="inputNick" placeholder="给自己个昵称" value="雷厉风行">
+                 </div>
+
+                 <!--<div class="input-group">-->
+                 <div class="form-group">
+                     <label for="inputBirthDay">生日</label><br/>
+                     <div class="row">
+                         <div class="col-lg-4 col-xs-4">
+                             <select name="year" class="form-control" id="inputBirthDay">
+                                 <option>1989</option>
+                                 <option>1990</option>
+                                 <option>1991</option>
+                                 <option>1992</option>
+                                 <option>1993</option>
+                             </select>
+                         </div>
+                         <div class="col-lg-4 col-xs-4">
+                             <select name="moon" class="form-control" id="inputBirthDay">
+                                 <option>一月</option>
+                                 <option>二月</option>
+                                 <option>三月</option>
+                                 <option>四月</option>
+                                 <option>五月</option>
+                             </select>
+                         </div>
+                         <div class="col-lg-4 col-xs-4">
+                             <select name="day" class="form-control" id="inputBirthDay">
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                                 <option>29</option>
+                                 <option>30</option>
+                             </select>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="form-group">
+                     <label for="inputCompany">所在公司</label>
+                     <input type="text" name="mycompany" class="form-control" id="inputCompany" placeholder="填写公司" value="深圳腾讯计算机有限公司">
+                 </div>
+                 <div class="form-group">
+                     <label for="inputPage">个人主页</label>
+                     <input type="url" name="mypage" class="form-control" id="inputPage" placeholder="个人主页" value="http://www.cblog.com/null">
+                 </div>
+                 <div class="form-group">
+                    <label for="inputEmail1">邮箱地址</label>
+                    <input type="email" name="email" class="form-control" id="inputEmail1" placeholder="填写邮箱地址" value="james.long169@gmail.com">
+                </div>
+                 <div class="form-group">
+                    <label for="inputTelPhone">手机号码</label>
+                    <input type="tel" name="phone" class="form-control" id="inputTelPhone" placeholder="填写手机号" value="152800835437">
+                </div>
+                 <div class="form-group">
+                     <button type="submit" class="btn btn-success">更新信息</button>
+                 </div>
+             </form>
+        </div>
+    </div>
+</div>
+
+<!-- 页脚 -->
+<% include footer.ejs %>
+
+<!-- 脚本 -->
+<% include javascript.ejs %>
+</body>
+</html>
